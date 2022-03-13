@@ -1,0 +1,22 @@
+from random import randint
+name = input("Please Enter Your Name:  ")
+print("Welcome! " + name)
+count = 7
+rand = randint(0,100)
+while True:
+    number = int(input("Please Enter A Number:  "))
+    hint = ""
+    if number == rand:
+        print("Yes! ")
+
+    else:
+        print("No Looser! ")
+        count -= 1
+        print("Hey Looser, You have " + str(count) + " Lives Left, Use it Wisely :) ")
+        if number > rand:
+            hint += "Way too Low "
+        elif number < rand:
+            hint += "Way too High "
+            if count == 0:
+                print("Lives Completed ")
+                break
